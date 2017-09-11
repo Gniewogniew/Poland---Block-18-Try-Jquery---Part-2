@@ -4,9 +4,9 @@ body {
 .bg{
 	position: fixed;
 	min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    top: 0;
+    	min-width: 1024px;
+   	width: 100%;
+    	top: 0;
 }
 #main-styling-box{
 	position: relative;
@@ -15,26 +15,26 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 #topbar{
-    margin: 30px auto;
-    padding: 5px;
-    background-color: rgba(192,192,192,0.4);
-    box-shadow: 0 0 20px black;
+    	margin: 40px 80px 0px 80px;
+    	padding: 5px;
+    	background-color: rgba(192,192,192,0.4);
+    	box-shadow: 0 0 20px black;
 }
 #topbar h1{
 	float:left;
-	margin-left: 120px;
+	margin-left: 40px;
 	font-size: 32px;
 }
 .ship{
-	margin-left: 66px;
-    height: 80px;
+	margin-left: 15px;
+    	height: 80px;
 }
 #information-panel{
-    width: 60%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgba(192,192,192,0.4);
-    box-shadow: 0 0 20px black;
+    	width: 60%;
+    	margin: 50px auto;
+    	padding: 20px;
+    	background-color: rgba(192,192,192,0.4);
+    	box-shadow: 0 0 20px black;
 }
 h2{
 	font-size: 20px;
@@ -42,65 +42,66 @@ h2{
 	margin-top: auto;
 }
 h2::first-letter {
-    font-size: 250%;
-
+    	font-size: 250%;
 }
 .menu{
 	float: left;
 	cursor: pointer;
 	margin-top: 12px;
-    margin-left: 10px;
+    	margin-left: 15px;
 }
 .menushow{
-    position:fixed;
-	width: 250px;
+    	position:fixed;
+	width: 220px;
+	height: 550px;
 	background-color: rgba(192,192,192,0.4);
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition:all 1s;
-    margin-top: 20px;
+    	top: 0;
+    	left: 0;
+    	overflow-x: hidden;
+    	transition:all 1s;
 }
 .sidebar{
-    position:fixed;
+    	position:fixed;
 	width: 0px;
 	background-color: rgba(192,192,192,0.4);
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition:all 1s;
-    margin-top: 20px;
+    	top: 0;
+    	left: 0;
+    	overflow-x: hidden;
+    	transition:all 1s;
 }
 #sidebar-list{
 	list-style: none;
 	padding-bottom: 40px;
+	margin-top: 100px;
+	padding-left: 1px;
 }
 #sidebar-list li{
-	padding-top: 40px;
+	padding-top: 35px;
 	cursor: pointer;
 	font-size: 30px;
+	padding-left: 50px;
 }
 #sidebar-list li:hover {
-    color: #f1f1f1;
-	transform: translate(30%);
+    	color: #f1f1f1;
+	transform: translate(20%);
 	border-bottom: 3px solid #f1f1f1;
-    width: 100px;
+    	width: 115px;
 }
 .close{
 	float: right;
 	cursor: pointer;
-	padding: 55px;
-	margin-right: 25px;
+	margin-right: 80px;
+    	padding-top: 20px;
 }
 #content {
 	width: 90%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgba(192,192,192,0.4);
-    box-shadow: 0 0 20px black;
-}
+    	margin: 50px auto;
+    	padding: 20px;
+    	background-color: rgba(192,192,192,0.4);
+    	box-shadow: 0 0 20px black;
+}	
 #content p{
 	text-indent: 40px;
-    margin-bottom: 40px;
-    font-size: 22px;
+    	margin-bottom: 40px;
+    	font-size: 22px;
 }
