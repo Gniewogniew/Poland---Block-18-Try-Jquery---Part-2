@@ -1,20 +1,17 @@
 function main() {
 
-    $(".menu").click(function() {
-        $(".sidebar").toggleClass("menushow");
-        $(".sidebar").removeClass("sidebar");
-        $(".menu").animate({
+    $(".open-menu-icon").click(function() {
+        $(".sidebar").toggleClass("show");
+        $(".open-menu-icon").animate({
             opacity: 0
         }, 500);
-
-        $(".close").click(function() {
-            $(".menushow").toggleClass("sidebar")
-            $(".menushow").removeClass("menushow");
-            $(".menu").animate({
+    });
+        $(".close-menu-icon").click(function() {
+        	$(".sidebar").removeClass("show");
+            $(".open-menu-icon").animate({
                 opacity: 1
             }, 500);
 
         });
-    });
-}
+    }
 $(main)
