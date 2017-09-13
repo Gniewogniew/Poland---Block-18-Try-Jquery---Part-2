@@ -8,9 +8,9 @@ body {
 .bg{
 	position: fixed;
 	min-height: 100%;
-    	min-width: 1024px;
-    	width: 100%;
-    	top: 0;
+    min-width: 1024px;
+    width: 100%;
+    top: 0;
 }
 .main-styling-box{
 	position: relative;
@@ -20,25 +20,25 @@ body {
 }
 .topbar{
 	display: flex;
-    	margin: 40px 80px 0px 80px;
-    	padding: 5px;
-    	background-color: rgba(192,192,192,0.4);
-    	box-shadow: 0 0 20px black;
+    margin: 40px 80px 0px 80px;
+    padding: 5px;
+    background-color: rgba(192,192,192,0.4);
+    box-shadow: 0 0 20px black;
 }
 .topbar p{
 	font-size: 33px;
-    	text-align: center;
+    text-align: center;
 }
 .ship-icon{
 	height: 90px;
-    	margin: 10px;
+    margin: 10px;
 }
 .information-panel{
-    	width: 60%;
-    	margin: 50px auto;
-    	padding: 20px;
-    	background-color: rgba(192,192,192,0.4);
-    	box-shadow: 0 0 20px black;
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(192,192,192,0.4);
+    box-shadow: 0 0 20px black;
 }
 h2{
 	font-size: 20px;
@@ -46,41 +46,75 @@ h2{
 	margin-top: auto;
 }
 h2::first-letter {
-    	font-size: 250%;
+    font-size: 250%;
 }
-.open-menu-icon{
+.menu-icon{
 	position: fixed;
 	cursor: pointer;
-    	left: 80px;
-    	top: 20px;
+    left: 80px;
+    top: 40px;
+    transition:all 3s;
+}
+.menu-icon.close-menu-icon{
+	opacity: 0;
+	transition:all 3s;
 }
 .sidebar.show{
-    	position:fixed;
+    position:fixed;
 	width: 220px;
 	background-color: rgba(192,192,192,0.4);
-    	top: 0;
-    	left: 0;
-    	overflow-x: hidden;
-    	transition:all 1,5s;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
 }
 .sidebar{
-    	position:fixed;
+    position:fixed;
 	width: 0px;
 	background-color: rgba(192,192,192,0.4);
-    	top: 0;
-    	left: 0;
-    	overflow-x: hidden;
-    	transition:all 1s;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition:all 1s;
+}
+.menu-hide-button{
+	position: relative;
+	font-size: 44px;
+    font-weight: bold;
+    border: 2px solid;
+    text-align: center;
+    border-radius: 50%;
+    width: 62px;
+    left: 79px;
+    background-color: rgba(192,192,192,0.1);
+    margin-top: 40px;
+    cursor: pointer;
+    height: 62px;
+}
+.menu-hide-button:hover{
+	color: #f1f1f1;
+	background: rgba(255,255,255,0.3);
+	box-shadow: inset 0 0 0 3px #f1f1f1;
+}
+.menu-hide-button.menu-icon{
+	position: relative;
+	font-size: 44px;
+    font-weight: bold;
+    border: 2px solid;
+    text-align: center;
+    border-radius: 50%;
+    width: 58px;
+    left: 79px;
+    background-color: rgba(192,192,192,0.1);
+    margin-top: 40px;
 }
 .sidebar-list{
 	list-style: none;
 	padding-bottom: 40px;
-	margin-top: 100px;
 	padding-left: 1px;
 }
 .sidebar-list li{
 	padding: 20px;
-    	text-align: center;
+    text-align: center;
 	cursor: pointer;
 	font-size: 30px;
 }
@@ -91,7 +125,7 @@ h2::first-letter {
 	transition: all 200ms ease;
 } 
 .sidebar-list li:hover {
-    	color: #f1f1f1;
+    color: #f1f1f1;
 	background: rgba(255,255,255,0.3);
 	box-shadow: inset 0 0 0 3px #f1f1f1;
 }
@@ -99,20 +133,21 @@ h2::first-letter {
 	left: 7px;
 }
 .close-menu-icon{
+	opacity: 0;
 	float: right;
 	cursor: pointer;
 	margin-right: 80px;
-    	padding-top: 20px;
+    padding-top: 20px;
 }
 .content {
 	width: 90%;
-    	margin: 50px auto;
-    	padding: 20px;
-    	background-color: rgba(192,192,192,0.4);
-    	box-shadow: 0 0 20px black;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(192,192,192,0.4);
+    box-shadow: 0 0 20px black;
 }
 .content p{
 	text-indent: 40px;
-    	margin-bottom: 40px;
-    	font-size: 22px;
+    margin-bottom: 40px;
+    font-size: 22px;
 }
