@@ -1,152 +1,151 @@
 body {
-	margin: auto;
+    margin: auto;
+    font-family: Lato, sans-serif;
 }
-@font-face{
-	font-family: Lato;
-	src: url("../fonts/Lato.ttf");
+@font-face {
+    font-family: Lato;
+    src: url("../fonts/Lato.ttf");
 }
-.bg{
-	position: fixed;
-	min-height: 100%;
-    	min-width: 1024px;
-    	width: 100%;
-    	top: 0;
+.scroll-background {
+    background: url("../img/background.jpg");
+    background-attachment: scroll;
+    position: fixed;
+    background-size: cover;
 }
-.main-styling-box{
-	position: relative;
-	margin-left: 15%;
-	margin-right: 15%;
-	font-family: Lato, sans-serif;
+.burger-menu {
+    position: fixed;
+    float: left;
+    width: 60px;
+    height: 45px;
+    margin: 50px auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-left: 75px;
 }
-.topbar{
-	display: flex;
-    	margin: 40px 80px 0px 80px;
-    	padding: 5px;
-    	background-color: rgba(192,192,192,0.4);
-    	box-shadow: 0 0 20px black;
+.burger-menu span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #f1f1f1;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
 }
-.topbar p{
-	font-size: 33px;
-    	text-align: center;
+.burger-menu span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center;
 }
-.ship-icon{
-	height: 90px;
-    	margin: 10px;
+.burger-menu span:nth-child(2) {
+    top: 18px;
+    transform-origin: left center;
 }
-.information-panel{
-    	width: 60%;
-    	margin: 50px auto;
-   	padding: 20px;
-    	background-color: rgba(192,192,192,0.4);
-    	box-shadow: 0 0 20px black;
+.burger-menu span:nth-child(3) {
+    top: 36px;
+    transform-origin: left center;
 }
-h2{
-	font-size: 20px;
-	text-indent: 40px;
-	margin-top: auto;
+.burger-menu.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: -3px;
+    left: 8px;
 }
-h2::first-letter {
-    	font-size: 250%;
+.burger-menu.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
 }
-.menu-icon{
-	position: fixed;
-	cursor: pointer;
-    	left: 80px;
-    	top: 40px;
-    	transition:all 3s;
+.burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
 }
-.menu-icon.close-menu-icon{
-	opacity: 0;
-	transition:all 3s;
+.topbar {
+    margin-left: 50px;
+    display: flex;
+    margin: 40px 250px 0px 250px;
+    padding: 5px;
+    background-color: rgba(192, 192, 192, 0.4);
+    box-shadow: 0 0 20px black;
+    justify-content: center
 }
-.sidebar.show{
-    	position:fixed;
-	width: 220px;
-	background-color: rgba(192,192,192,0.4);
-    	top: 0;
-    	left: 0;
-    	overflow-x: hidden;
+.topbar p {
+    font-size: 33px;
+    text-align: center;
 }
-.sidebar{
-    	position:fixed;
-	width: 0px;
-	background-color: rgba(192,192,192,0.4);
-    	top: 0;
-    	left: 0;
-    	overflow-x: hidden;
-    	transition:all 1s;
+.ship-icon {
+    height: 90px;
+    margin: 10px;
 }
-.menu-hide-button{
-	position: relative;
-	font-size: 45px;
-    	font-weight: bold;
-    	border: 2px solid;
-    	border-radius: 50%;
-    	width: 62px;
-    	left: 79px;
-    	background-color: rgba(192,192,192,0.1);
-    	margin-top: 40px;
-    	cursor: pointer;
-    	height: 62px;
+.information-panel {
+    width: 55%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(192, 192, 192, 0.4);
+    box-shadow: 0 0 20px black;
 }
-.menu-hide-button:hover{
-	color: #f1f1f1;
-	background: rgba(255,255,255,0.3);
-	box-shadow: inset 0 0 0 3px #f1f1f1;
+.information-panel p {
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 40px;
+    margin-top: auto;
 }
-.menu-hide-button.menu-icon{
-	position: relative;
-	font-size: 44px;
-    	font-weight: bold;
-    	border: 2px solid;
-    	text-align: center;
-    	border-radius: 50%;
-    	width: 58px;
-   	left: 79px;
-    	background-color: rgba(192,192,192,0.1);
-    	margin-top: 40px;
+.information-panel p::first-letter {
+    font-size: 250%;
 }
-.sidebar-list{
-	list-style: none;
-	padding-bottom: 40px;
-	padding-left: 1px;
+.sidebar.open {
+    position: fixed;
+    width: 200px;
+    background-color: rgba(192, 192, 192, 0.4);
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
 }
-.sidebar-list li{
-	padding: 20px;
-   	 text-align: center;
-	cursor: pointer;
-	font-size: 30px;
+.sidebar {
+    position: fixed;
+    width: 0px;
+    background-color: rgba(192, 192, 192, 0.4);
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: all 1s;
+}
+.sidebar-list {
+    margin-top: 120px;
+    list-style: none;
+    padding-bottom: 20px;
+    padding-left: 1px;
+}
+.sidebar-list li {
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 30px;
 }
 .sidebar-list li:before {
-	content:"->";
-	position: absolute;
-	left: -30px;
-	transition: all 200ms ease;
-} 
+    content: "->";
+    position: absolute;
+    left: -30px;
+    transition: all 200ms ease;
+}
 .sidebar-list li:hover {
-    	color: #f1f1f1;
-	background: rgba(255,255,255,0.3);
-	box-shadow: inset 0 0 0 3px #f1f1f1;
+    color: #f1f1f1;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 0 3px #f1f1f1;
 }
 .sidebar-list li:hover:before {
-	left: 7px;
-}
-.close-menu-icon{
-	opacity: 0;
-	float: right;
-	cursor: pointer;
-	margin-right: 80px;
-    	padding-top: 20px;
+    left: 7px;
 }
 .content {
-	width: 90%;
-    	margin: 50px auto;
-    	padding: 20px;
-    	background-color: rgba(192,192,192,0.4);
-    	box-shadow: 0 0 20px black;
+    width: 75%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(192, 192, 192, 0.4);
+    box-shadow: 0 0 20px black;
 }
-.content p{
-	text-indent: 40px;
-   	 margin-bottom: 40px;
-    	font-size: 22px;
+.content p {
+    text-indent: 40px;
+    margin-bottom: 40px;
+    font-size: 22px;
 }
