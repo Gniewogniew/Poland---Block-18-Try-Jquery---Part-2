@@ -1,12 +1,7 @@
 function main() {
-
-    $(".menu-icon").click(function() {
-        $(".sidebar").toggleClass("show");
-        $(".menu-icon").toggleClass("close-menu-icon");
+    $(".burger-menu").click(function() {
+        $(".sidebar").toggleClass("open");
+        $(".burger-menu").toggleClass('open');
     });
 }
-	$(".menu-hide-button").click(function() {
-	    $(".sidebar").removeClass("show");
-	    $(".menu-icon").toggleClass("close-menu-icon");
-	});
 $(main)
