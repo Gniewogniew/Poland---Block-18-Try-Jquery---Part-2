@@ -1,23 +1,19 @@
 body {
-    margin: auto;
+    margin: 0;
+    padding: 0;
     font-family: Lato, sans-serif;
+    background: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
 @font-face {
     font-family: Lato;
     src: url("../fonts/Lato.ttf");
 }
-.scroll-background {
-    background: url("../img/background.jpg");
-    background-attachment: scroll;
-    position: absolute;
-    background-size: cover;
-}
 .burger-menu {
     position: fixed;
-    float: left;
     width: 60px;
     height: 45px;
-    margin: 50px auto;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
